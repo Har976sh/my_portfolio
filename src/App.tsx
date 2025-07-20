@@ -126,7 +126,7 @@ function App() {
           <div className="about-content">
             <div className="about-image">
               <div className="profile-image">
-                <img src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Harsh Jangid" />
+                <img src={require('./assets/profile.HEIC')} alt="Harsh Jangid" />
               </div>
             </div>
             <div className="about-text">
