@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, User, MessageSquare, ExternalLink, Code, Database, Brain, Settings, Phone, MapPin } from 'lucide-react';
+import { Github, Linkedin, Mail, User, MessageSquare, ExternalLink, Code, Database, Brain, Settings } from 'lucide-react';
 import './App.css';
+import profileImg from './assets/profile.jpg';
 
 const colorThemes = [
   { primary: '#10B981', secondary: '#F97316', accent: '#3B82F6', name: 'green-orange' },
@@ -97,7 +98,7 @@ function App() {
       <section id="home" className="section hero-section">
         <div className="container">
           <div className="hero-content">
-            <h1 className="hero-name">Harsh Jangid</h1>
+            <h1 className="hero-name">I'm Harsh Jangid</h1>
             <div className="designation-container">
               <span className="designation-text">{designations[currentDesignation]}</span>
             </div>
@@ -126,7 +127,7 @@ function App() {
           <div className="about-content">
             <div className="about-image">
               <div className="profile-image">
-                <img src={require('./assets/profile.HEIC')} alt="Harsh Jangid" />
+                <img src={profileImg} alt="Harsh Jangid" />
               </div>
             </div>
             <div className="about-text">
@@ -217,6 +218,22 @@ function App() {
             <div className="project-category">
               <h3 className="category-title">Major Projects</h3>
               <div className="project-cards">
+                <div className="project-card">
+                  <div className="project-icon">
+                    <Settings size={48} />
+                  </div>
+                  <h4>CI/CD Pipeline</h4>
+                  <p>Automated DevOps pipeline for building, testing, and deploying applications.</p>
+                  <a href="https://github.com/Har976sh/devops_project1" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{marginTop: '1rem'}}>View on GitHub</a>
+                </div>
+                <div className="project-card">
+                  <div className="project-icon">
+                    <Database size={48} />
+                  </div>
+                  <h4>File Manager</h4>
+                  <p>Advanced Streamlit-based file manager app for Windows filesystem operations.</p>
+                  <a href="https://github.com/Har976sh/filemanager" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{marginTop: '1rem'}}>View on GitHub</a>
+                </div>
                 <div className="project-card placeholder">
                   <div className="project-icon">
                     <Code size={48} />
@@ -230,6 +247,14 @@ function App() {
             <div className="project-category">
               <h3 className="category-title">Minor Projects</h3>
               <div className="project-cards">
+                <div className="project-card">
+                  <div className="project-icon">
+                    <User size={48} />
+                  </div>
+                  <h4>FaceSwap</h4>
+                  <p>Basic face swap using OpenCV and cvzone in Python.</p>
+                  <a href="https://github.com/Har976sh/face_swap" target="_blank" rel="noopener noreferrer" className="btn btn-secondary" style={{marginTop: '1rem'}}>View on GitHub</a>
+                </div>
                 <div className="project-card placeholder">
                   <div className="project-icon">
                     <Code size={48} />
@@ -293,47 +318,9 @@ function App() {
                 </button>
               </form>
             </div>
-            
-            <div className="contact-animation">
-              <div className="earth-container">
-                <div className="earth">
-                  <div className="earth-inner"></div>
-                </div>
-                <div className="spaceship">
-                  🚀
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div className="social-links">
-            <h3>Follow Me</h3>
-            <div className="social-grid">
-              <a href="https://github.com/Har976sh" target="_blank" rel="noopener noreferrer" className="social-link">
-                <Github size={24} />
-                <span>GitHub</span>
-              </a>
-              <a href="https://www.linkedin.com/in/harsh-jangid-298965276/" target="_blank" rel="noopener noreferrer" className="social-link">
-                <Linkedin size={24} />
-                <span>LinkedIn</span>
-              </a>
-              <a href="https://x.com/Harsh63991861" target="_blank" rel="noopener noreferrer" className="social-link">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                </svg>
-                <span>Twitter</span>
-              </a>
-            </div>
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="footer">
-        <div className="container">
-          <p>&copy; 2024 Harsh Jangid. All rights reserved.</p>
-        </div>
-      </footer>
     </div>
   );
 }
